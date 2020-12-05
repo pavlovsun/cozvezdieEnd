@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HackRTF - home</title>
+	<link rel="shortcut icon" href="images/ico.ico" type="image/png">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link id='dynamic-css' href="style-night.css" rel="stylesheet">
+	<script src="script.js"></script>
+  <script src="day-night-cookie.js"></script>
+</head>
+
+<body>
+  <div class="bg1"></div>
+  <!--Button-->
+  <button type="button">
+    <label class="switch">
+      <input type="checkbox"  class="next-slide-butt" id='css-dynamic-checkbox' onchange="myFunctionStyle()">
+      <span class="slider round"></span>
+    </label>
+    <h2>Night/Day</h2>
+  </button>
+
+  <script>
+    var css_day = 'style-day.css';
+		var css_night = 'style-night.css';
+    var cur_css = document.getElementById('dynamic-css');
+    var chkbox = document.getElementById('css-dynamic-checkbox');
+    
+    cur_css.href = css_night;
+    chkbox.checked = false;
+    setCookie("styleState", css_night, 1000);
+
+    function myFunctionStyle() {
+      if ( chkbox.checked && getCookie("styleState") == css_night) {
+        console.log('If inside');
+        cur_css.href = css_day;
+        setCookie("styleState", css_day, 1000);
+      } else {
+        console.log('Else inside');
+        cur_css.href = css_night;
+        setCookie("styleState", css_night, 1000);
+      };
+    };
+  </script>
+  <!--ContactForm-->
+  <div class="block-index">
+    <div>
+      <h2 class="pls">Please sign in</h2>
+    </div>
+    <div><input class="log" id="InputLogin" type="text" name="login" placeholder="Login"></div>
+    <div><input class="pass" type="password" id="InputPass" name="password" placeholder="Password"></div>
+    <button id="btn-connected" disabled><a href="second.html" class="btn"></a></button>
+  </div>
+  <div id="scrollTop" onclick="goUp();"></div>
+</body>
+
+</html>

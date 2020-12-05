@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HackRTF - home</title>
+	<link rel="shortcut icon" href="images/ico.ico" type="image/png">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link id='dynamic-css' href="style-night.css" rel="stylesheet">
+	<script src="script.js"></script>
+  <script src="day-night-cookie.js"></script>
+</head>
+
+<body>
+  <header>
+      <div class="header-box">
+				<div class="logo"><a href="index.html"><img src="images/logo.gif" alt=""></a></div>
+				<nav>
+          <a href="second.html">home</a>
+          <a href="about.html">about</a>
+          <a href="blog.html">blog</a>
+          <a href="contact.html">contact</a>
+				</nav>
+			</div>
+  </header>
+
+	  <div class="banner-area"><h2 class="text-magic">blog</h2></div>
+		<div class="content-area">
+			<div class="wrapper">
+        <h2>Blog</h2>
+        <p>
+          <h2>5 Dec</h2> <p>Сайт идеален: добавлены новые статьи, был закончен дизайн, произведе на максимальная оптимизация.
+          Теперь ты можешь все хак...,ой, защититься от всего.</p>
+          <h2>4 Dec</h2> - <p>Любители разных тем, возрадуйтесь. Мы добавили возможность менять темы. Теперь ты можешь выбирать свою сторону.</p>
+          <h2>3 Dec</h2> - <p>Теперь вы можете увидеть лица владельцев канала. На сайт залиты наши фотографии.</p>
+          <h2>2 Dec</h2> - <p>Сайту добавили немного анимации. Теперь радуется не только душа, но и глаз).</p>
+          <h2>1 Dec</h2> - <p>Сайт создан первый макет залит на сервер, можете на него посмотреть. Если есть какие-то предложения- пишите нам в соц сети.</p>
+          <h2>30 Jan</h2> - <p>Выбрана тема сайта: информационная безопасность. Если ты лютый хак.., параноик, то тебе к нам.</p>
+        </p>
+        <p>В тот замечательный день мы сделали новый блок для сайта! <br>
+          На взгяд наших многочисленных пользователей,<br>круче всего смотриться эффект печатания.<br>Разберемся как он работает:<br>
+          Для начала создадим div, в него добавим текст - заголовок, и присвоим класс:
+          <br>
+    
+          <p class="css" style="background: #545454;">
+            <span class="html-div">&lt;div сlаss="banner-area"&gt;</span> <br>
+            <span class="html-div">&lt;h2&gt; class="text-magic">NEWS&lt;/h2&gt;</span> <br>
+            <span class="html-div">&lt;/div&gt;</span>
+          </p>
+    
+        <p>Тут все просто <br>
+          Переходим в css:<br>
+        </p>
+
+        <p class="css" style="background: #545454;">
+          .text-magic{ /*Обращемся к классу*/<br>
+            width: 100%; /*Ставим 100% ширину*/<br>
+            overflow: hidden; /**/<br>
+            color: white; /*Меняем стандартный цвет на белый*/<br>
+            font-size: 40px; /*Залаем размер шрифта*/<br>
+            font-family: monospace; /*Задаем шрифт*/<br>
+            border-right: 4px solid orange; /*Делаем текстовый курсор*/<br>
+            animation: printed-text 5s steps(21), /*Делаем анимацию*/<br>
+                   flashin-border .75s step-start infinite; /**/<br>
+            }<br>
+            <br>
+            @keyframes flashin-border{ /*Имя анимации { список правил }*/<br>
+            0%{<br>
+              border-color: orange; /*Возврат цвета текстовому курсору*/<br>
+            }<br>
+            50%{<br>
+              border-color: transparent; /*Эффект мирцания*/<br>
+            }<br>
+            100%{<br>
+              border-color: orange; /*Возврат цвета текстовому курсору*/<br>
+            }<br>
+            }<br>
+            <br>
+            @keyframes printed-text{ /*Имя анимации { список правил }*/<br>
+            from { /**/<br>
+              width: 0%; /**/<br>
+            }<br>
+            }<br>
+        </p>
+        <p>
+          Готово, ты стал настоящим джедаем CSS, продолжай развиваться в этом направлении, какой наш канал, плоды Падаванов, и скоро мы захватим этот мир.
+        </p>
+        <p style="color: #e6e4e4;">Его груша обратилась (в) РУЛЕТ</p>
+			</div>
+    </div>
+<div id="scrollTop" onclick="goUp();">Вверх</div>
+</body>
+<script src="script.js"></script>
+</html>
